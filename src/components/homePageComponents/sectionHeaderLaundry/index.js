@@ -38,11 +38,11 @@ const SectionHeader = () => {
             <h4 className={classes.subtitle}>
               {data.strapiPickUp.topbar.subtitle}
             </h4>
-            <span className={classes.link}>
+            {/* <span className={classes.link}>
               <a href={data.strapiPickUp.topbar.link}>
                 {data.strapiPickUp.topbar.textLink}
               </a>
-            </span>
+            </span> */}
           </div>
 
           <div className={classes.right}>
