@@ -5,15 +5,22 @@ import EquipmentSection from "../components/homePageComponents/equipmentSection/
 import SimpleTodo from "../components/SimpleTodo"
 import Offer from "../components/OfferLaundry"
 import { Description } from "../components/Description/Description"
+import { ThingsToKnow } from "../components/ThingsToKnow/ThingsToKnow"
+import { Areas } from "../components/Areas/Areas"
+import { TablePricing } from "../components/TablePricing/TablePricing"
 
 export default function PickUp() {
   return (
     <Layout>
       <SectionHeaderLaundry />
-      <Description />
+      <Areas />
+      <TablePricing />
+      <ThingsToKnow />
+
+      {/* <Description /> */}
       <SimpleTodo />
       <Offer />
-      <EquipmentSection />
+      {/* <EquipmentSection /> */}
     </Layout>
   )
 }

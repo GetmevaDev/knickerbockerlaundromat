@@ -25,8 +25,6 @@ const SimpleTodo = () => {
     }
   `)
 
-  console.log("data", data)
-
   return (
     <section
       className={classes.sectionCycle}
