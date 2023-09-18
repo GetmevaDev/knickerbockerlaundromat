@@ -30,7 +30,7 @@ const SimpleTodo = () => {
       className={classes.sectionCycle}
       style={{
         paddingTop: 100,
-        paddingBottom: 0,
+        paddingBottom: 100,
       }}
     >
       <Title title={`Scheduling is simple to do`} />

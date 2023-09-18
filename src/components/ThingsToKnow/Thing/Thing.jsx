@@ -8,11 +8,9 @@ export const Thing = ({ number, description, color }) => {
     setIsShowDescription(!isShowDescription)
   }
 
-  console.log(color, "color")
-
   const truncatedDescription = isShowDescription
     ? description
-    : description.slice(0, 100) + "..."
+    : description.slice(0, 80) + "..."
 
   return (
     <div className={styles.thing}>
@@ -24,7 +22,7 @@ export const Thing = ({ number, description, color }) => {
         {truncatedDescription}
         <div className={styles.content}>
           {!isShowDescription && (
-            <span className={styles.read} onClick={toggleDescription}>
+            <div className={styles.read} onClick={toggleDescription}>
               Read more
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -38,7 +36,7 @@ export const Thing = ({ number, description, color }) => {
                   fill="#2676BC"
                 />
               </svg>
-            </span>
+            </div>
           )}
         </div>
       </div>

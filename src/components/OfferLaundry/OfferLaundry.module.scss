@@ -16,7 +16,6 @@
 }
 
 .text {
-  margin-bottom: 100px;
   font-family: "Rubik-Regular";
   font-weight: 500;
   font-size: 25px;
@@ -142,11 +141,10 @@
   font-weight: normal;
   font-size: 16px;
   line-height: 19px;
-  color: #D8F6FF;
+  color: #d8f6ff;
 }
 
 @media only screen and (min-width: $tableWidth) and (max-width: $smDesktopWidth) {
-
   .offerRight,
   .offerLeft {
     flex-direction: column;

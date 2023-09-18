@@ -76,6 +76,10 @@ export const TablePricing = () => {
         Services {
           SubTItle
           title
+          NameOfServices {
+            name
+            id
+          }
         }
       }
     }
@@ -98,9 +102,11 @@ export const TablePricing = () => {
             <div className={styles.service_table}>
               <div className={styles.table_header}>
                 <div className={styles.services_name}>Name of the service</div>
-                <div className={styles.name_plan}>House special, $1.49/lb</div>
-                <div className={styles.name_plan}>Premium, $1.69/lb</div>
-                <div className={styles.name_plan}>Free & Clear, $1.89/lb</div>
+                {data?.strapiPickUp?.Services?.NameOfServices?.map(item => (
+                  <div className={styles.name_plan} key={item.id}>
+                    {item.name}
+                  </div>
+                ))}
               </div>
               <div className={styles.table_body}>
                 {data?.strapiPickUp?.Service?.map((service, index) => (

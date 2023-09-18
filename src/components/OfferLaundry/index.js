@@ -15,6 +15,7 @@ const Offer = () => {
           cardSubTitle
           cardTitle
           pricePer
+          id
           price
           BackgroundColor
         }
@@ -26,26 +27,34 @@ const Offer = () => {
   `)
 
   return (
-    <div className={classes.container}>
+    <div
+      className={classes.container}
+      style={{
+        paddingBottom: 30,
+      }}
+    >
       <div data-aos="fade-up" className={classes.offer}>
-        <h3 className={classes.title}>{data.strapiPickUp.TitleCard}</h3>
+        <h3 className={classes.title}>{data?.strapiPickUp?.TitleCard}</h3>
 
         <div className={classes.offerMain}>
-          {data.strapiPickUp.card.map(item => {
+          {data?.strapiPickUp?.card?.map(item => {
             return (
               <div
+                key={item.id}
                 className={classes.offerLeft}
                 style={{ backgroundColor: `#${item.BackgroundColor}` }}
               >
                 <div className={classes.price}>
                   <p>
-                    {item.price}
-                    <span className={classes.priceBottom}>{item.pricePer}</span>
+                    {item?.price}
+                    <span className={classes.priceBottom}>
+                      {item?.pricePer}
+                    </span>
                   </p>
                 </div>
                 <div className={classes.premium}>
-                  <p className={classes.premiumTitle}>{item.cardTitle}</p>
-                  <p className={classes.color}>{item.cardSubTitle}</p>
+                  <p className={classes.premiumTitle}>{item?.cardTitle}</p>
+                  <p className={classes.color}>{item?.cardSubTitle}</p>
                 </div>
               </div>
             )
@@ -71,10 +80,10 @@ const Offer = () => {
             </div>
           </div> */}
         </div>
-        <span className={classes.offerText}>{data.strapiPickUp.Span}</span>
+        <span className={classes.offerText}>{data?.strapiPickUp?.Span}</span>
       </div>
       <span className={classes.text} data-aos="fade-up">
-        {data.strapiPickUp.textundercard}
+        {data?.strapiPickUp?.textundercard}
       </span>
     </div>
   )
