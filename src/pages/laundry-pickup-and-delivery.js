@@ -19,7 +19,7 @@ export default function PickUp() {
 
       {/* <Description /> */}
       <SimpleTodo />
-      <Offer />
+      {/* <Offer /> */}
       {/* <EquipmentSection /> */}
     </Layout>
   )
