@@ -34,13 +34,6 @@ export function PopUp(){
     setCleanPopUp(!cleanPopUp)
   }
 
-  console.log(cleanPopUp);
-
-
-
-
-
-
 
 
   return(
