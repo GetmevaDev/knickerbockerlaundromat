@@ -37,6 +37,7 @@ module.exports = {
           `drop-off-service`,
           `description-site`,
           `pick-up`,
+          `pop-up-warning`,
         ],
         // Possibility to login with a strapi user, when content types are not publically available (optional).
         loginData: {
