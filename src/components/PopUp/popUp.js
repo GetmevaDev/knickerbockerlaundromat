@@ -1,9 +1,9 @@
-import React, {useEffect} from "react"
-import useLocalStorage from "use-local-storage";
+import React from "react"
+import useLocalStorage from "use-local-storage"
 import ReactMarkdown from "react-markdown"
-import {graphql, useStaticQuery} from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import CloseWarning from "../../images/CloseWarning.svg"
-import * as  classes from "./popup.module.scss"
+import * as classes from "./popup.module.scss"
 import MailchimpForm from "../MailInput/MainInput"
 
 export function PopUp() {
@@ -29,15 +29,13 @@ export function PopUp() {
     MaxWidthBlock,
   } = data.strapiPopUpWarning
 
-  const [cleanPopUp, setCleanPopUp] = useLocalStorage("PopUpOff", true)
+  const [cleanPopUp, setCleanPopUp] = useLocalStorage("PopUpOff", true, {
+    syncData: true,
+  })
 
   const removeCard = () => {
     setCleanPopUp(!cleanPopUp)
   }
-
-  useEffect(() => {
-    setCleanPopUp(true)
-  }, [])
 
   return Switch_PopUp ? (
     <div

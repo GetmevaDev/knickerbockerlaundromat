@@ -1,27 +1,29 @@
 import React, { useState } from "react"
-import styles from "./MainInput.module.scss"
+import useLocalStorage from "use-local-storage"
 
 const MailchimpForm = () => {
   const [isChecked, setIsChecked] = useState(false)
+  const [cleanPopUp, setCleanPopUp] = useLocalStorage("PopUpOff", true)
 
   const handleCheckboxChange = event => {
     setIsChecked(event.target.checked)
   }
 
+  const removeCard = () => {
+    setCleanPopUp(!cleanPopUp)
+  }
+
   return (
-    <div id="mc_embed_shell" className={styles.mc_embed_shell}>
-      <div id="mc_embed_signup" className={styles.mc_embed_signup}>
+    <div id="mc_embed_shell">
+      <div id="mc_embed_signup">
         <form
-          action="https://robertgerov.us22.list-manage.com/subscribe/post?u=0f708cb939016478ca2267f5f&amp;id=ddc39aa3f3&amp;f_id=004bcce1f0"
+          action="https://knickerbockerlaundromat.us10.list-manage.com/subscribe/post?u=20441683fc9a837201832f86c&amp;id=0ec9b38f23&amp;f_id=002d5be5f0"
           method="post"
           className="validate"
-          target="_blank"
           style={{ margin: 0 }}
+          onSubmit={removeCard}
         >
-          <div
-            id="mc_embed_signup_scroll"
-            className={styles.mc_embed_signup_scroll}
-          >
+          <div id="mc_embed_signup_scroll">
             <div
               className="mc-field-group"
               style={{ width: "100%", maxWidth: "500px", margin: "0 auto" }}
@@ -94,7 +96,7 @@ const MailchimpForm = () => {
             >
               <input
                 type="text"
-                name="b_0f708cb939016478ca2267f5f_ddc39aa3f3"
+                name="b_20441683fc9a837201832f86c_0ec9b38f23"
                 tabIndex="-1"
                 value=""
               />
