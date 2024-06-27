@@ -61,9 +61,9 @@ export function PopUp() {
           className={classes.buttonClose}
           type={`button`}
         >
-          <img src={CloseWarning} alt="" />
+          <img src={CloseWarning} alt="Close" />
         </button>
-        <ReactMarkdown source={Text} />
+        <ReactMarkdown>{Text}</ReactMarkdown>
         <MailchimpForm />
         <div className={classes.linkContainer}>
           <a className={classes.linkWarning} href={Link}>
